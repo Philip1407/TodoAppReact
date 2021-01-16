@@ -1,0 +1,69 @@
+.App {
+  font-family: arial;
+  font-size: 16px;
+  align-items: center;
+  margin-left: 35%;
+  margin-right: 30%;
+  background-color: bisque;
+  padding: 10px;
+}
+
+.todo-item {
+  margin: 5px;
+  border: solid;
+  border-width: 1;
+}
+.todo-item input {
+  display: inline-block;
+}
+.todo-item p {
+  display: inline-block;
+  margin: 10px;
+  overflow: auto;
+}
+
+.todo-item button {
+  color: white;
+  background-color: red;
+  border: 50%;
+}
+
+.filter p {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.filter button {
+  background-color: gainsboro;
+}
+
+button {
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.done {
+  background-color: green;
+  color: white;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  align-items: center;
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+.add-todo {
+  height: 30px;
+  width: 260px;
+  margin-bottom: 10px;
+}
