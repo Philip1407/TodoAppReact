@@ -6,17 +6,21 @@ export default function TodoItem(props) {
   if (props.isDone === true) cname = cname + " done";
   let status = props.isDone;
   return (
-    <div className={cname}>
-      <div className="column left">
+    <tr className={cname}>
+      <td className="left">
         <input
           type="checkbox"
           onClick={props.onCheck}
           onChange={(e) => {}}
           checked={status}
         />
+      </td>
+      <td className="middle">
         <p>{props.name}</p>
-      </div>
-      <button onClick={props.onDelete}>x</button>
-    </div>
+      </td>
+      <td className="right">
+        <button onClick={props.onDelete}>x</button>
+      </td>
+    </tr>
   );
 }

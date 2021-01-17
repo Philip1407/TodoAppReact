@@ -13,7 +13,7 @@ export default class App extends React.Component {
           done: false
         }
       ],
-      filter: "haha"
+      filter: "all"
     };
   }
 
@@ -89,20 +89,25 @@ export default class App extends React.Component {
           placeholder="Enter todo name here"
           onKeyPress={(e) => this.addTodoItem(e)}
         ></input>
-        <div className="list">
-          {ItemList.filter((e) => FilterEle(e)).map((e, index) => (
-            <TodoItem
-              key={index}
-              name={e.name}
-              isDone={e.done}
-              onCheck={(e) => this.onItemCheck(e, index)}
-              onDelete={(e) => this.DeleteItem(e, index)}
-            />
-          ))}
-        </div>
+        <table className="list">
+          <tbody>
+            {ItemList.filter((e) => FilterEle(e)).map((e, index) => (
+              <TodoItem
+                key={index}
+                name={e.name}
+                isDone={e.done}
+                onCheck={(e) => this.onItemCheck(e, index)}
+                onDelete={(e) => this.DeleteItem(e, index)}
+              />
+            ))}
+          </tbody>
+        </table>
         <br />
         <button onClick={(e) => this.ToogleAllClick()}>Toogle All</button>
-        <Filter FilterClick={(e) => this.FilterClick(e, ItemList)} />
+        <Filter
+          FilterClick={(e) => this.FilterClick(e, ItemList)}
+          filter={this.state.filter}
+        />
       </div>
     );
   }

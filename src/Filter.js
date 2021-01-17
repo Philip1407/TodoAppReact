@@ -5,13 +5,25 @@ export default function Filter(props) {
   return (
     <div className="filter">
       <p>Filter</p>
-      <button name="all" onClick={props.FilterClick}>
+      <button
+        className={props.filter === "all" ? "filter-choose" : ""}
+        name="all"
+        onClick={props.FilterClick}
+      >
         All
       </button>
-      <button name="done" onClick={props.FilterClick}>
+      <button
+        className={props.filter === "done" ? "filter-choose" : ""}
+        name="done"
+        onClick={props.FilterClick}
+      >
         Done
       </button>
-      <button name="active" onClick={props.FilterClick}>
+      <button
+        className={props.filter === "active" ? "filter-choose" : ""}
+        name="active"
+        onClick={props.FilterClick}
+      >
         Active
       </button>
     </div>
